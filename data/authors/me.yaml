@@ -15,7 +15,7 @@ postnominals:
   # - MIEEE
 status:
   icon: "🧠"
-role: Research Scholar
+role: Research Scholar <br>lindu[at]fas.harvard.edu
 bio: |
   Lin Du is a Research Scholar at Department of Psychology | Center for Brain Science, Harvard University. 
   supervised by <span style="color:red">Prof. Randy Buckner</span>. 
