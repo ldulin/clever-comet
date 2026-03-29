@@ -4,6 +4,9 @@
 # Tutorial: https://docs.hugoblox.com/tutorial/
 # Documentation: https://docs.hugoblox.com/
 # ══════════════════════════════════════════════════════════════════════════════
+baseURL: "https://ldulin.github.io/clever-comet/"
+
+
 hugoblox:
   schema: "2.0"
 
