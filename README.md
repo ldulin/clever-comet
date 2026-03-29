@@ -109,7 +109,7 @@ Learn more: docs on [Notebooks](https://docs.hugoblox.com/reference/markdown/#-n
 ## Get Started
 
 ### Option 1: No-Code (Fastest)
-Launch a fully hosted site in your browser. No software to install.
+Launch a fully hosted site in your browser. No software to install
 
 👉 [**Launch in Browser (Free)**](https://hugoblox.com/templates/academic-cv/start?utm_source=github&utm_medium=readme)
 
