@@ -27,9 +27,9 @@ affiliations:
     email: lindu[at]fas.harvard.edu
 
 links:
-  # - icon: at-symbol
-  #   url: mailto:lin.du@example.com
-  #   label: E-mail Me
+  - icon: at-symbol
+    url: mailto:lindu@fas.harvard.edu
+    label: E-mail Me
   - icon: brands/x
     url: https://x.com/dylan_lin_du
   - icon: brands/github
@@ -47,7 +47,7 @@ interests:
   - Reinforcement Learning
   - AI Ethics
 
-education:
+education & training:
   - degree: PhD Computer Science
     institution: Stanford University
     start: 2015-09-01
