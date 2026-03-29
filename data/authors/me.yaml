@@ -15,10 +15,9 @@ status:
   icon: "🧠"
 role: Research Scholar
 bio: |
-  Lin Du is a Research Scholar at Department of Psychology, Center for Brain Science, Harvard University. His research
-  has been published in top conferences like NeurIPS and ICML, with over
-  10,000 citations. Lin is passionate about pushing the boundaries of AI
-  while ensuring ethical development.
+  Lin Du is a Research Scholar at Department of Psychology | Center for Brain Science, Harvard University. 
+  supervised by <span style="color:red">Prof. Randy Buckner</span>. 
+  I am also an <span style="color:red">online intern at the Vision and Computational Cognition Group at the Max Planck Institute</span> for Human Cognitive and Brain Sciences under <span style="color:red">Prof. Martin Hebart</span>.
 
 affiliations:
   - name: Harvard University
