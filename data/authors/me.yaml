@@ -8,7 +8,7 @@ name:
   alternate: ''  # Example: 王伟
   pronunciation: ''  # Example: Wáng Wěi
   pronouns: 
-  email: lindu[at]fas.harvard.edu
+
 
 postnominals:
   # - PhD
@@ -23,8 +23,8 @@ bio: |
 
 affiliations:
   - name: Harvard University
-
     url: https://www.harvard.edu/
+    email: lindu[at]fas.harvard.edu
 
 links:
   # - icon: at-symbol
