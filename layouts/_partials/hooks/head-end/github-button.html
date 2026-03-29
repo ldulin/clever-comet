@@ -1,1 +1,32 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
+{{ with (index site.Data.authors "me") }}
+  {{ with .affiliations }}
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const affiliations = {{ . | jsonify | safeJS }};
+        const profileTitles = document.querySelectorAll('.resume-biography .portrait-title');
+
+        profileTitles.forEach(function (title) {
+          const orgBlocks = Array.from(title.querySelectorAll(':scope > .mb-2'));
+
+          affiliations.forEach(function (affiliation, index) {
+            if (!affiliation || !affiliation.email) return;
+
+            const block = orgBlocks[index];
+            if (!block || block.querySelector('.hb-affiliation-email')) return;
+
+            const email = document.createElement('div');
+            email.className = 'hb-affiliation-email';
+            email.style.fontSize = '0.95rem';
+            email.style.lineHeight = '1.35';
+            email.style.color = 'rgb(75 85 99)';
+            email.style.marginTop = '0.15rem';
+            email.textContent = affiliation.email;
+
+            block.appendChild(email);
+          });
+        });
+      });
+    </script>
+  {{ end }}
+{{ end }}
