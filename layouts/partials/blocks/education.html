@@ -1,1 +1,15 @@
-<h2 class="section-title">Education & Training</h2>
+<section id="education" class="block">
+  <div class="container">
+    <h2 class="section-title">Education & Training</h2>
+
+    {{/* 渲染教育经历列表（从 data/authors/me.yaml 读取） */}}
+    {{ $author := site.Data.authors.me }}
+    {{ range $author.education }}
+      <div class="edu-item">
+        <h3>{{ .degree }}</h3>
+        <p>{{ .institution }}</p>
+        {{ if .year }}<p>{{ .year }}</p>{{ end }}
+      </div>
+    {{ end }}
+  </div>
+</section>
