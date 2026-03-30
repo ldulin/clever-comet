@@ -49,10 +49,10 @@ interests:
   # - AI Ethics
 
 education:
-  - degree: PhD Computer Science
-    institution: Stanford University
-    start: 2015-09-01
-    end: 2019-06-30
+  - degree: Research Scholar
+    institution: Harvard University
+    start: 2025-07-01
+    end: Present
     summary: |
       Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
     button:
