@@ -32,8 +32,8 @@ links:
     label: E-mail Me
   - icon: brands/x
     url: https://x.com/dylan_lin_du
-  - icon: brands/github
-    url: https://github.com/example
+  # - icon: brands/github
+  #   url: https://github.com/example
   - icon: brands/linkedin
     url: https://www.linkedin.com/in/lin-du-0a84b7363/
   - icon: academicons/google-scholar
@@ -42,10 +42,11 @@ links:
     url: https://orcid.org/0009-0007-4035-4443
 
 interests:
-  - Large Language Models
-  - Computer Vision
-  - Reinforcement Learning
-  - AI Ethics
+  - Computational Neuroscience
+  - Cognitive Neuroscience
+  - NeuroAI
+  - Vision Sciences
+  # - AI Ethics
 
 education:
   - degree: PhD Computer Science
