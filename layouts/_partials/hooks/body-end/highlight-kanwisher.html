@@ -1,13 +1,15 @@
 <script>
   (function () {
+    const targets = ['Kanwisher Lab', 'Buckner Lab'];
+
     function highlightKanwisher() {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {
-          if (!node.nodeValue || !node.nodeValue.includes('Kanwisher Lab')) return NodeFilter.FILTER_REJECT;
+          if (!node.nodeValue || !targets.some(target => node.nodeValue.includes(target))) return NodeFilter.FILTER_REJECT;
           const parent = node.parentElement;
           if (!parent) return NodeFilter.FILTER_REJECT;
           if (parent.closest('script, style')) return NodeFilter.FILTER_REJECT;
-          if (parent.closest('.hb-kanwisher-red')) return NodeFilter.FILTER_REJECT;
+          if (parent.closest('.hb-highlight-red')) return NodeFilter.FILTER_REJECT;
           return NodeFilter.FILTER_ACCEPT;
         }
       });
@@ -16,10 +18,13 @@
       while (walker.nextNode()) nodes.push(walker.currentNode);
 
       nodes.forEach(function (node) {
-        const html = node.nodeValue.replaceAll(
-          'Kanwisher Lab',
-          '<span class="hb-kanwisher-red" style="color: red;">Kanwisher Lab</span>'
-        );
+        let html = node.nodeValue;
+        targets.forEach(function (target) {
+          html = html.replaceAll(
+            target,
+            '<span class="hb-highlight-red" style="color: red;">' + target + '</span>'
+          );
+        });
         const wrapper = document.createElement('span');
         wrapper.innerHTML = html;
         node.parentNode.replaceChild(wrapper, node);
