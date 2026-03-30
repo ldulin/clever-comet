@@ -50,7 +50,7 @@ interests:
 
 education:
   - degree: Research Scholar
-    institution: MIT | Kanwisher Lab
+    institution: MIT | <span style="color:red">Kanwisher Lab</span>
     start: 2026-03-01
     end: Present
     summary: |
@@ -60,7 +60,7 @@ education:
       url: /resume.pdf
       icon: hero/arrow-down-tray
   - degree: Research Scholar
-    institution: Harvard University | Buckner Lab
+    institution: Harvard University | <span style="color:red">Buckner Lab</span>
     start: 2025-07-01
     end: Present
   - degree: MEng Computer Science
