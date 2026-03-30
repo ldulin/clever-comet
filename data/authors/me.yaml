@@ -50,8 +50,8 @@ interests:
 
 education:
   - degree: Research Scholar
-    institution: Harvard University
-    start: 2025-07-01
+    institution: MIT | Kanwisher Lab
+    start: 2026-03-01
     end: Present
     summary: |
       Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
@@ -59,14 +59,14 @@ education:
       text: Download dissertation
       url: /resume.pdf
       icon: hero/arrow-down-tray
-  - degree: MS Computer Science
-    institution: Carnegie Mellon University
-    start: 2013-09-01
-    end: 2015-05-31
-  - degree: BS Computer Science
-    institution: MIT
-    start: 2009-09-01
-    end: 2013-05-31
+  - degree: Research Scholar
+    institution: Harvard University | Buckner Lab
+    start: 2025-07-01
+    end: Present
+  - degree: MEng Computer Science
+    institution: Beijing Normal University | McGovern Institute for Brain Research
+    start: 2023-09-01
+    end: 2026-07-31
 
 experience:
   - role: Senior AI Research Scientist
