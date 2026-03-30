@@ -106,10 +106,10 @@ skills:
 languages:
   - name: English
     level: 5
-    label: Native
-  - name: Spanish
-    level: 4
     label: Fluent
+  - name: Chinese
+    level: 5
+    label: Native
 
 awards:
   - title: Best Paper Award
