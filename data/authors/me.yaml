@@ -54,12 +54,12 @@ education:
     institution: MIT | <span style="color:red">Kanwisher Lab</span>
     start: 2026-03-01
     end: Present
-    summary: |
-      Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
-    button:
-      text: Download dissertation
-      url: /resume.pdf
-      icon: hero/arrow-down-tray
+    # summary: |
+    #   Thesis on scaling laws for neural language models. Published 5 papers in NeurIPS and ICML.
+    # button:
+    #   text: Download dissertation
+    #   url: /resume.pdf
+    #   icon: hero/arrow-down-tray
   - degree: Research Scholar
     institution: Harvard University | <span style="color:red">Buckner Lab</span>
     start: 2025-07-01
