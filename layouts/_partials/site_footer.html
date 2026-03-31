@@ -1,5 +1,5 @@
 <footer class="footer" style="text-align: center; padding: 1.25rem 0 1rem;">
-  <div id="globe-container" style="width: 300px; height: 300px; margin: 0 auto;"></div>
+  <div id="globe-container" style="width: 220px; height: 220px; margin: 0 auto;"></div>
 
   <p>© Lin Du, Department of Psychology, Harvard University | Center for Brain Sciences, Harvard University</p>
 </footer>
@@ -8,8 +8,9 @@
 <script>
   const globeContainer = document.getElementById("globe-container");
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
   renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+  renderer.setClearColor(0x000000, 0);
   globeContainer.appendChild(renderer.domElement);
 
   const scene = new THREE.Scene();
@@ -22,13 +23,17 @@
   camera.position.z = 300;
 
   const globe = new ThreeGlobe()
-    .globeImageUrl("//unpkg.com/three-globe/example/img/earth-dark.jpg")
-    .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png");
+    .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg")
+    .bumpImageUrl("https://unpkg.com/three-globe/example/img/earth-topology.png");
 
   scene.add(globe);
 
-  const light = new THREE.AmbientLight(0xffffff, 1);
+  const light = new THREE.AmbientLight(0xffffff, 1.2);
   scene.add(light);
+
+  const dirLight = new THREE.DirectionalLight(0xffffff, 1.2);
+  dirLight.position.set(1, 1, 1);
+  scene.add(dirLight);
 
   function animate() {
     requestAnimationFrame(animate);
