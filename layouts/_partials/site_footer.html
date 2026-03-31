@@ -1,10 +1,121 @@
-<footer class="footer" style="text-align: center; padding: 1rem 0;">
-  <p>© Lin Du, Department of Psychology, Harvard University | Center for Brain Sciences, Harvard University</p>
-  <div id="mmvst-footer" style="margin-top: 0.75rem; min-height: 140px;">
-    <script
-      type="text/javascript"
-      id="mmvst_globe"
-      src="https://mapmyvisitors.com/globe.js?d=43uTJ7Zo7dxIgFFsDZejkXzMKzhOXrz3S9pjb_1oEhU">
-    </script>
+<footer class="footer" style="text-align: center; padding: 1.25rem 0 1rem;">
+  <style>
+    .footer-globe-wrap {
+      display: flex;
+      justify-content: center;
+      margin-top: 0.9rem;
+      margin-bottom: 0.85rem;
+      perspective: 1000px;
+    }
+
+    .footer-globe {
+      position: relative;
+      width: 112px;
+      height: 112px;
+      border-radius: 9999px;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.95) 0 10%, rgba(255, 255, 255, 0) 22%),
+        radial-gradient(circle at 35% 30%, rgba(141, 211, 255, 0.9) 0, rgba(54, 121, 214, 0.92) 48%, rgba(16, 42, 98, 0.98) 100%);
+      box-shadow:
+        inset -18px -20px 32px rgba(5, 18, 52, 0.35),
+        inset 16px 10px 22px rgba(255, 255, 255, 0.2),
+        0 18px 40px rgba(8, 20, 48, 0.22);
+    }
+
+    .footer-globe::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background:
+        repeating-linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.18) 0 2px,
+          rgba(255, 255, 255, 0) 2px 18px
+        );
+      animation: footer-globe-spin 16s linear infinite;
+      opacity: 0.55;
+    }
+
+    .footer-globe::after {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      border-radius: 9999px;
+      border-top: 1.5px solid rgba(255, 255, 255, 0.42);
+      border-bottom: 1.5px solid rgba(255, 255, 255, 0.26);
+      transform: rotate(-12deg);
+      opacity: 0.9;
+    }
+
+    .footer-globe-shadow {
+      position: absolute;
+      left: 50%;
+      bottom: -14px;
+      width: 88px;
+      height: 18px;
+      transform: translateX(-50%);
+      border-radius: 9999px;
+      background: rgba(8, 16, 34, 0.18);
+      filter: blur(8px);
+    }
+
+    .footer-globe-arc {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      border-left: 1.5px solid rgba(255, 255, 255, 0.26);
+      border-right: 1.5px solid rgba(255, 255, 255, 0.12);
+      transform: rotate(18deg) scaleX(0.72);
+      opacity: 0.8;
+    }
+
+    .footer-globe-arc.arc-2 {
+      transform: rotate(-18deg) scaleX(0.5);
+      opacity: 0.45;
+    }
+
+    .footer-globe-ring {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 138px;
+      height: 38px;
+      transform: translate(-50%, -50%) rotate(-10deg);
+      border-radius: 9999px;
+      border: 1.5px solid rgba(93, 162, 255, 0.38);
+      box-shadow: 0 0 18px rgba(74, 144, 226, 0.14);
+    }
+
+    .footer-globe-ring::after {
+      content: "";
+      position: absolute;
+      inset: 8px 14px;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    @keyframes footer-globe-spin {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-36px);
+      }
+    }
+  </style>
+
+  <div class="footer-globe-wrap" aria-hidden="true">
+    <div style="position: relative;">
+      <div class="footer-globe-ring"></div>
+      <div class="footer-globe">
+        <div class="footer-globe-arc"></div>
+        <div class="footer-globe-arc arc-2"></div>
+      </div>
+      <div class="footer-globe-shadow"></div>
+    </div>
   </div>
+
+  <p>© Lin Du, Department of Psychology, Harvard University | Center for Brain Sciences, Harvard University</p>
 </footer>
