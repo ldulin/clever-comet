@@ -23,7 +23,9 @@ bio: |
 affiliations:
   - name: Harvard University
     url: https://www.harvard.edu/
-    email: lindu[at]fas.harvard.edu
+  - name: MIT
+    url: https://www.mit.edu/
+ 
 
 links:
   - icon: at-symbol
