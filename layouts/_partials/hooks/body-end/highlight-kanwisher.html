@@ -2,23 +2,12 @@
   (function () {
     const targets = ['Kanwisher Lab', 'Buckner Lab'];
 
-    function shiftAvatarImage() {
-      document.querySelectorAll('img.avatar').forEach(function (img) {
-        if (window.innerWidth < 768) {
-          img.style.position = '';
-          img.style.left = '';
-          return;
-        }
-
-        img.style.position = 'relative';
-        img.style.left = window.innerWidth >= 1024 ? '-100px' : '-64px';
-      });
-    }
-
-    function highlightKanwisher() {
+    function highlightLabNames() {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {
-          if (!node.nodeValue || !targets.some(target => node.nodeValue.includes(target))) return NodeFilter.FILTER_REJECT;
+          if (!node.nodeValue || !targets.some(target => node.nodeValue.includes(target))) {
+            return NodeFilter.FILTER_REJECT;
+          }
           const parent = node.parentElement;
           if (!parent) return NodeFilter.FILTER_REJECT;
           if (parent.closest('script, style')) return NodeFilter.FILTER_REJECT;
@@ -47,14 +36,11 @@
     let attempts = 0;
     const timer = window.setInterval(function () {
       attempts += 1;
-      shiftAvatarImage();
-      highlightKanwisher();
+      highlightLabNames();
       if (attempts >= 20) window.clearInterval(timer);
     }, 500);
 
-    window.addEventListener('resize', shiftAvatarImage);
-    window.addEventListener('load', shiftAvatarImage);
-    window.addEventListener('load', highlightKanwisher);
-    document.addEventListener('DOMContentLoaded', highlightKanwisher);
+    window.addEventListener('load', highlightLabNames);
+    document.addEventListener('DOMContentLoaded', highlightLabNames);
   })();
 </script>
