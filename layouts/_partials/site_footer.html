@@ -1,23 +1,39 @@
 <footer class="footer" style="text-align: center; padding: 1.25rem 0 1rem;">
-  <div id="vanta-globe" style="width: 200px; height: 200px; margin: 0 auto;"></div>
+  <div id="globe-container" style="width: 300px; height: 300px; margin: 0 auto;"></div>
 
   <p>© Lin Du, Department of Psychology, Harvard University | Center for Brain Sciences, Harvard University</p>
 </footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-
+<script src="https://unpkg.com/three@0.150.0/build/three.min.js"></script>
+<script src="https://unpkg.com/three-globe"></script>
 <script>
-  VANTA.GLOBE({
-    el: "#vanta-globe",
-    mouseControls: false,
-    touchControls: false,
-    gyroControls: false,
-    minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.0,
-    scaleMobile: 1.0,
-    color: 0xffffff,
-    backgroundColor: 0x000000
-  })
+  const globeContainer = document.getElementById("globe-container");
+
+  const renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+  globeContainer.appendChild(renderer.domElement);
+
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    45,
+    globeContainer.clientWidth / globeContainer.clientHeight,
+    0.1,
+    1000
+  );
+  camera.position.z = 300;
+
+  const globe = new ThreeGlobe()
+    .globeImageUrl("//unpkg.com/three-globe/example/img/earth-dark.jpg")
+    .bumpImageUrl("//unpkg.com/three-globe/example/img/earth-topology.png");
+
+  scene.add(globe);
+
+  const light = new THREE.AmbientLight(0xffffff, 1);
+  scene.add(light);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    globe.rotation.y += 0.002;
+    renderer.render(scene, camera);
+  }
+  animate();
 </script>
