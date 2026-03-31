@@ -2,6 +2,32 @@
   (function () {
     const targets = ['Kanwisher Lab', 'Buckner Lab'];
 
+    function adjustAvatarLayout() {
+      if (window.innerWidth < 768) return;
+
+      document.querySelectorAll('.resume-biography').forEach(function (section) {
+        section.style.alignItems = 'flex-start';
+
+        const profile = section.querySelector('#profile');
+        if (profile) {
+          profile.style.position = 'relative';
+          profile.style.left = window.innerWidth >= 1024 ? '-64px' : '-40px';
+        }
+
+        const avatar = section.querySelector('.avatar-wrapper');
+        if (avatar) {
+          avatar.style.position = 'relative';
+          avatar.style.left = window.innerWidth >= 1024 ? '-48px' : '-28px';
+        }
+
+        const title = section.querySelector('.portrait-title');
+        if (title) {
+          title.style.position = 'relative';
+          title.style.left = window.innerWidth >= 1024 ? '-24px' : '-12px';
+        }
+      });
+    }
+
     function highlightKanwisher() {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {
@@ -34,10 +60,13 @@
     let attempts = 0;
     const timer = window.setInterval(function () {
       attempts += 1;
+      adjustAvatarLayout();
       highlightKanwisher();
       if (attempts >= 20) window.clearInterval(timer);
     }, 500);
 
+    window.addEventListener('resize', adjustAvatarLayout);
+    window.addEventListener('load', adjustAvatarLayout);
     window.addEventListener('load', highlightKanwisher);
     document.addEventListener('DOMContentLoaded', highlightKanwisher);
   })();
