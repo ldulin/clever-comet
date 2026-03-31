@@ -2,18 +2,6 @@
   (function () {
     const targets = ['Kanwisher Lab', 'Buckner Lab'];
 
-    function shiftAvatar() {
-      if (window.innerWidth < 768) return;
-
-      document.querySelectorAll('.resume-biography').forEach(function (section) {
-        const firstCol = section.firstElementChild;
-        if (!firstCol) return;
-
-        firstCol.style.transform = window.innerWidth >= 1024 ? 'translateX(-72px)' : 'translateX(-48px)';
-        firstCol.style.position = 'relative';
-      });
-    }
-
     function highlightKanwisher() {
       const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {
@@ -46,13 +34,10 @@
     let attempts = 0;
     const timer = window.setInterval(function () {
       attempts += 1;
-      shiftAvatar();
       highlightKanwisher();
       if (attempts >= 20) window.clearInterval(timer);
     }, 500);
 
-    window.addEventListener('resize', shiftAvatar);
-    window.addEventListener('load', shiftAvatar);
     window.addEventListener('load', highlightKanwisher);
     document.addEventListener('DOMContentLoaded', highlightKanwisher);
   })();
