@@ -25,8 +25,8 @@
 {{ $education_heading := $block.content.headings.education | default "Education & Training" }}
 {{ $interests_heading := $block.content.headings.interests | default "Interests" }}
 
-<div class="resume-biography px-3 flex flex-col md:flex-row justify-center gap-12">
-  <div class="flex-none m-w-[130px] mx-auto md:mx-0">
+<div class="resume-biography px-3 flex flex-col md:flex-row justify-center gap-12 lg:gap-16">
+  <div class="flex-none w-full mx-auto md:mx-0 md:-ml-8 lg:-ml-12" style="max-width: {{$display_size}}px;">
     <div id="profile" class="flex justify-center items-center flex-col">
       {{ if $avatar }}
         <div class="avatar-wrapper mt-10" style="width: {{$display_size}}px; height: {{$display_size}}px;">
