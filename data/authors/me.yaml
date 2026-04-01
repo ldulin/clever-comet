@@ -17,7 +17,7 @@ status:
   icon: "🧠"
 role: Research Scholar <br>lindu[at]fas.harvard.edu <br>ldu[at]mit.edu
 bio: |
-  Lin Du is a Research Scholar at Department of Brain and Cognitive Sciences | McGovern Institute for Brain Research, MIT, supervised by Prof. <span style="color:red">Nancy >Kanwisher</span>, and an Research Scholar at Department of Psychology | Center for Brain Science, Harvard University, supervised by Prof. <span style="color:red">Randy Buckner</span>.
+  Lin Du is a Research Scholar at Department of Brain and Cognitive Sciences | McGovern Institute for Brain Research, MIT, supervised by Prof. <span style="color:red">Nancy Kanwisher</span>, and also at Department of Psychology | Center for Brain Science, Harvard University, supervised by Prof. <span style="color:red">Randy Buckner</span>.
 
 affiliations:
   - name: Harvard University
@@ -59,7 +59,7 @@ education:
     #   text: Download dissertation
     #   url: /resume.pdf
     #   icon: hero/arrow-down-tray
-  - degree: Research Scholar
+  - degree: Research Fellow
     institution: Harvard University | <span style="color:red">Buckner Lab</span>
     start: 2025-07-01
     end: Present
