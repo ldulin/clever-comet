@@ -91,7 +91,7 @@ Learn more: docs on [Notebooks](https://docs.hugoblox.com/reference/markdown/#-n
 
 | Feature | Academic CV (Free) | Academic CV Pro & Resumé Pro |
 | --- | --- | --- |
-| Design | Professional & clean | Premium designs |
+| Design | Professional & clean | Premium designs
 | Layouts | Standard sections | Advanced timelines & layouts |
 | Courses/Lectures | Basic | Fully-Featured |
 | First Impression | Strong | Unforgettable |
