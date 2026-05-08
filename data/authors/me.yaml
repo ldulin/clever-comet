@@ -61,7 +61,7 @@ education:
     #   url: /resume.pdf
     #   icon: hero/arrow-down-tray
   - degree: Research Fellow
-    institution: Harvard University | <span style="color:red">Buckner Lab</span>
+    institution: Harvard University | <a class="hb-profile-link" href="https://psychology.fas.harvard.edu/people/randy-l-buckner/" target="_blank" rel="noopener noreferrer">Buckner Lab</a>
     start: 2025-07-01
     end: Present
   - degree: MEng Computer Science

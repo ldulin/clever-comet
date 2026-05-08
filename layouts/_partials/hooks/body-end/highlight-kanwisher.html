@@ -11,7 +11,7 @@
           const parent = node.parentElement;
           if (!parent) return NodeFilter.FILTER_REJECT;
           if (parent.closest('script, style')) return NodeFilter.FILTER_REJECT;
-          if (parent.closest('.hb-highlight-red')) return NodeFilter.FILTER_REJECT;
+          if (parent.closest('.hb-profile-link, .hb-highlight-red')) return NodeFilter.FILTER_REJECT;
           return NodeFilter.FILTER_ACCEPT;
         }
       });
@@ -24,7 +24,7 @@
         targets.forEach(function (target) {
           html = html.replaceAll(
             target,
-            '<span class="hb-highlight-red" style="color: red;">' + target + '</span>'
+            '<span class="hb-profile-link hb-highlight-red">' + target + '</span>'
           );
         });
         const wrapper = document.createElement('span');
