@@ -86,6 +86,9 @@ jobs:
           pnpm approve-builds
         fi
 
+    - name: Install TailwindCSS
+      run: npm install -D tailwindcss postcss autoprefixer
+
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
