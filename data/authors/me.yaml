@@ -51,7 +51,7 @@ interests:
 
 education:
   - degree: Research Scholar
-    institution: MIT | <span style="color:red">Kanwisher Lab</span>
+    institution: MIT | <a class="hb-profile-link" href="https://mcgovern.mit.edu/profile/nancy-kanwisher/" target="_blank" rel="noopener noreferrer">Kanwisher Lab</a>
     start: 2026-03-01
     end: Present
     # summary: |
