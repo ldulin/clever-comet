@@ -47,6 +47,9 @@ jobs:
     - name: Setup pnpm
       if: hashFiles('package.json') != ''
       uses: pnpm/action-setup@v4
+      
+    - name: Install TailwindCSS
+      run: npm install -D tailwindcss postcss autoprefixer
 
     - name: Get Hugo Version
       id: hugo-version
