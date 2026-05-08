@@ -61,8 +61,8 @@ jobs:
         sudo mv /tmp/yq /usr/local/bin/yq
         sudo chmod +x /usr/local/bin/yq
         
-        # Read hugo_version from hugoblox.yaml
-        VERSION=$(yq '.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
+        # Read pinned Hugo version from hugoblox.yaml
+        VERSION=$(yq '.build.hugo_version // ""' hugoblox.yaml 2>/dev/null | grep -v '^null$' || true)
         
         # Fallback to a known stable version if not specified
         DEFAULT_VERSION="0.154.5"
@@ -75,6 +75,7 @@ jobs:
         fi
         
         echo "HUGO_VERSION=$VERSION" >> $GITHUB_ENV
+        echo "version=$VERSION" >> $GITHUB_OUTPUT
         echo "Using Hugo version: $VERSION"
 
     - name: Install dependencies
@@ -91,7 +92,7 @@ jobs:
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
       with:
-        hugo-version: 'latest'
+        hugo-version: ${{ steps.hugo-version.outputs.version }}
         extended: true
 
     # Cache dependencies (Go modules, node_modules) - stable, rarely changes
