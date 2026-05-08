@@ -83,11 +83,10 @@ jobs:
         if [ -f "package.json" ]; then
           echo "Installing Tailwind dependencies..."
           pnpm install --no-frozen-lockfile || npm install
-          pnpm approve-builds
         fi
 
-    - name: Install TailwindCSS
-      run: npm install -D tailwindcss postcss autoprefixer
+    # - name: Install TailwindCSS
+    #   run: npm install -D tailwindcss postcss autoprefixer
 
     - name: Setup Hugo
       uses: peaceiris/actions-hugo@v3
