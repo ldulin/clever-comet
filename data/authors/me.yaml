@@ -65,11 +65,11 @@ education:
     start: 2025-07-01
     end: Present
   - degree: MEng Computer Science
-    institution: Beijing Normal University | McGovern Institute for Brain Research
+    institution: Beijing Normal University | McGovern Institute for Brain Research | <a class="hb-profile-link" href="https://scholar.google.com/citations?user=aSBMwycAAAAJ&hl/" target="_blank" rel="noopener noreferrer">Liu Lab</a>
     start: 2023-09-01
     end: 2026-07-31
 
-experience: []
+# experience:
 #   - role: Senior AI Research Scientist
 #     org: Meta AI
 #     start: 2020-01-01
