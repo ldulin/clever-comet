@@ -24,8 +24,8 @@ publishDate: '2017-01-01T00:00:00Z'
 publication_types: ['paper-journal']
 
 # Publication name and optional abbreviated publication name.
-publication: In *npj Digital Medicine*
-publication_short: In *npj Digital Medicine*
+publication: "**npj Digital Medicine**"
+publication_short: "**npj Digital Medicine**"
 
 abstract: >-
   The specific neuroanatomy of mild cognitive impairment (MCI) is obscured by its clinical heterogeneity and confounding effects from normative variation. This problem is compounded by the inability of conventional neuroimaging methods to disentangle these overlapping influences. Leveraging data from the Beijing Aging Brain Rejuvenation Initiative (BABRI, n = 918) and the Alzheimer’s Disease Neuroimaging Initiative (ADNI, n = 1293), this study employed a conditional variational autoencoder (CVAE) to: (1) systematically distinguish between aging-related cognitive decline and MCI-specific cognitive impairments; (2) implicitly disentangle latent, unknown confounding effects to identify MCI-specific structural brain alterations; and (3) construct individualized scores for predicting the risk of conversion to Alzheimer’s disease (AD). The CVAE effectively extracted MCI-specific latent features from T1 structural MRI, significantly correlated with episodic memory, attention, and executive function impairments. Reconstructions revealed characteristic deformation in regions including the middle and medial temporal lobes, frontal lobe, limbic system, and cerebellum. The robustness of this structural-cognitive impairment association model established in BABRI dataset was validated in the ADNI dataset. Moreover, predictive modeling using these features achieved superior AD-conversion prediction (AUC = 0.83) versus whole-brain atrophy (AUC = 0.74; p < 0.001) or CSF biomarkers (AUC = 0.77; p < 0.001). This work establishes a novel paradigm for isolating MCI-specific brain alterations from physiological aging.
