@@ -13,6 +13,8 @@ sections:
   - block: resume-experience
     content:
       username: me
+      headings:
+        education: 'Education & Training'
     design:
       # Hugo date format
       date_format: 'January 2006'

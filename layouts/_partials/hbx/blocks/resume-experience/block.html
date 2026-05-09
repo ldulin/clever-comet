@@ -9,6 +9,8 @@
 {{ if not (reflect.IsMap $content) }}{{ $content = dict }}{{ end }}
 {{ $design := $block.design }}
 {{ if not (reflect.IsMap $design) }}{{ $design = dict }}{{ end }}
+{{ $headings := index $content "headings" }}
+{{ if not (reflect.IsMap $headings) }}{{ $headings = dict }}{{ end }}
 
 {{ $text := "" }}
 {{ $text_raw := index $content "text" }}
@@ -283,7 +285,15 @@
 
 {{ if gt (len $education) 0 }}
 <div class="w-full">
-  <h2 class="mb-10 text-3xl font-bold text-gray-900 dark:text-white text-center">{{ i18n "education" | default "Education" }}</h2>
+  {{ $education_heading := i18n "education" | default "Education" }}
+  {{ $education_heading_raw := index $headings "education" }}
+  {{ if eq (printf "%T" $education_heading_raw) "string" }}
+    {{ $education_heading_raw = strings.TrimSpace $education_heading_raw }}
+    {{ if ne $education_heading_raw "" }}
+      {{ $education_heading = $education_heading_raw }}
+    {{ end }}
+  {{ end }}
+  <h2 class="mb-10 text-3xl font-bold text-gray-900 dark:text-white text-center">{{ $education_heading | markdownify }}</h2>
   
   {{/* Timeline container */}}
   <div class="relative">
