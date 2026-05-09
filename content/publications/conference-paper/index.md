@@ -1,19 +1,19 @@
 ---
-title: 'An example conference paper'
+title: 'Decoupling MCI-specific signatures from shared neurobiological substrates of cognitive aging via deep learning'
 
 # Authors
 # If you created a profile for a user (e.g. the default `me` user), write the username (folder name) here
 # and it will be replaced with their full name and linked to their profile.
 authors:
+  - Biying Peng
   - me
-  - Robert Ford
 
 # Author notes (optional)
-author_notes:
-  - 'Equal contribution'
-  - 'Equal contribution'
+# author_notes:
+#   - 'Equal contribution'
+#   - 'Equal contribution'
 
-date: '2013-07-01T00:00:00Z'
+date: '2026-04-23T00:00:00Z'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2017-01-01T00:00:00Z'
@@ -46,17 +46,17 @@ hugoblox:
 # Custom links
 links:
   - type: pdf
-    url: ""
-  - type: code
-    url: https://github.com/HugoBlox/kit
-  - type: dataset
-    url: https://github.com/HugoBlox/kit
-  - type: slides
-    url: https://www.slideshare.net/
-  - type: source
-    url: https://github.com/HugoBlox/kit
-  - type: video
-    url: https://youtube.com
+    url: "https://www.nature.com/articles/s41746-026-02597-3/"
+  # - type: code
+  #   url: https://github.com/HugoBlox/kit
+  # - type: dataset
+  #   url: https://github.com/HugoBlox/kit
+  # - type: slides
+  #   url: https://www.slideshare.net/
+  # - type: source
+  #   url: https://github.com/HugoBlox/kit
+  # - type: video
+  #   url: https://youtube.com
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
