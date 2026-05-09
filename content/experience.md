@@ -17,9 +17,9 @@ sections:
         education: 'Education & Training'
       extra_education:
         - degree: Online Intern
-          institution: Max Planck Institute
-          start: 2023-09-01
-          end: 2026-07-31
+          institution: Vision and Computational Cognition Group | Max Planck Institute for Human Cognitive and Brain Sciences | <a class="hb-profile-link" href="https://www.cbs.mpg.de/employees/hebart/" target="_blank" rel="noopener noreferrer">Hebart Lab</a>
+          start: 2025-04-01
+          end: 2026-04-01
     design:
       # Hugo date format
       date_format: 'January 2006'

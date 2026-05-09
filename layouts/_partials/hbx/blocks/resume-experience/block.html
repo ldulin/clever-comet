@@ -108,7 +108,9 @@
 {{ end }}
 {{ $extra_education_raw := index $content "extra_education" }}
 {{ if reflect.IsSlice $extra_education_raw }}
-  {{ $education_iter = $education_iter | append $extra_education_raw }}
+  {{ range $extra_education_raw }}
+    {{ $education_iter = $education_iter | append . }}
+  {{ end }}
 {{ else if and $extra_education_raw (reflect.IsMap $extra_education_raw) }}
   {{ $education_iter = $education_iter | append $extra_education_raw }}
 {{ end }}
