@@ -20,6 +20,11 @@ sections:
           institution: Vision and Computational Cognition Group | Max Planck Institute for Human Cognitive and Brain Sciences | <a class="hb-profile-link" href="https://www.cbs.mpg.de/employees/hebart/" target="_blank" rel="noopener noreferrer">Hebart Lab</a>
           start: 2025-04-01
           end: 2026-04-01
+
+        - degree: Summer School, AI Computing Systems 
+          institution: School of Electronics Engineering and Computer Science, Peking University | Institute of Computing Technology, Chinese Academy of Science 
+          start: 2021-07-01
+          end: 2021-08-01
     design:
       # Hugo date format
       date_format: 'January 2006'
