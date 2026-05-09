@@ -15,6 +15,11 @@ sections:
       username: me
       headings:
         education: 'Education & Training'
+      extra_education:
+        - degree: Online Intern
+          institution: Max Planck Institute
+          start: 2023-09-01
+          end: 2026-07-31
     design:
       # Hugo date format
       date_format: 'January 2006'
